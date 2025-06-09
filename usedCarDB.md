@@ -1,12 +1,12 @@
-| NAME         | TYPE                                 | ATTRIBUTES | INDEX |
-| ------------ | ------------------------------------ | ---------- | ----- |
-| id           | bigint                               |            |       |
-| brand        | varchar(20)                          |            |       |
-| Model        | varchar(20)                          |            |       |
-| Plate        | char(7)                              |            |       |
-| registration | year                                 |            |       |
-| color        | varchar(20)                          |            |       |
-| km           | int                                  |            |       |
-| chassis      | int                                  |            |       |
-| condition    | ENUM("km0","usato","N1","aziendali") |            |       |
-| crashed      | boolean                              |            |       |
+| NAME         | TYPE                                  | ATTRIBUTES                         | INDEX       |
+| ------------ | ------------------------------------- | ---------------------------------- | ----------- |
+| id           | BIGINT                                | NOT NULL, A.I, UNSIGNED            | PRIMARY_KEY |
+| brand        | VARCHAR(20)                           | NOT NULL, DEFAULT("brand")         | INDEX       |
+| Model        | VARCHAR(20)                           | NOT NULL, DEFAULT("model")         | INDEX       |
+| Plate        | CHAR(7)                               | NOT NULL, DEFAULT(XX000XX), UNIQUE | INDEX       |
+| registration | YEAR                                  | NOT NULL                           | INDEX       |
+| color        | ENUM("gray","black","white","silver") | NOT NULL                           |             |
+| km           | int                                   | NULL, UNSIGNED                     |             |
+| chassis      | int                                   | NOT NULL, UNSIGNED                 | INDEX       |
+| used tyoe    | ENUM("km0","usato","N1","aziendali")  | NOT NULL                           | INDEX       |
+| crashed      | boolean                               | NULL                               |             |
