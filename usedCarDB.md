@@ -10,3 +10,4 @@
 | chassis      | int                                   | NOT NULL, UNSIGNED                 | INDEX       |
 | used tyoe    | ENUM("km0","usato","N1","aziendali")  | NOT NULL                           | INDEX       |
 | crashed      | boolean                               | NULL                               |             |
+| price        | FLOAT(9, 3)                           | NOT NULL                           | INDEX       |
